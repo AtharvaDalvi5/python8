@@ -2,12 +2,12 @@ import schedule
 import time
 
 def Display():
-    print("Coding Kar..!")
+    print("Namaskar...")
 
 def main():
     print("Automation Script Started.")
 
-    schedule.every(30).minutes.do(Display)
+    schedule.every().day.at("09:00").do(Display)
 
     while True:
         schedule.run_pending()

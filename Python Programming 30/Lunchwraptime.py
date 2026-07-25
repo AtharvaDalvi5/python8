@@ -1,13 +1,17 @@
 import schedule
 import time
 
-def Display():
-    print("Coding Kar..!")
+def Lunch():
+    print("Lunch Time!")
+
+def WrapUp():
+    print("Wrap up work")
 
 def main():
     print("Automation Script Started.")
 
-    schedule.every(30).minutes.do(Display)
+    schedule.every().day.at("13:00").do(Lunch)
+    schedule.every().day.at("18:00").do(WrapUp)
 
     while True:
         schedule.run_pending()
